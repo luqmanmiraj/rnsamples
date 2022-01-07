@@ -19,10 +19,10 @@ import TabSevenScreen from '../screens/BasicComp';
 import TabSixScreen from '../screens/BasicComp';
 
 import TabTwoScreen from '../screens/scrollView';
-import TabFourScreen from '../screens/TabFourScreen';
+import TabFourScreen from '../screens/SectionList';
 import TabFiveScreen from '../screens/TabFiveScreen';
 
-import TabThreeScreen from '../screens/TabThreeScreen';
+import TabThreeScreen from '../screens/flatList';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -104,7 +104,7 @@ function BottomTabNavigator() {
         name="TabThree"
         component={TabThreeScreen}
         options={{
-          title: 'Tab Three',
+          title: 'FlatList',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
@@ -112,7 +112,7 @@ function BottomTabNavigator() {
         name="TabFour"
         component={TabFourScreen}
         options={{
-          title: 'Tab Four',
+          title: 'SectionList',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

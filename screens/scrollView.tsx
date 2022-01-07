@@ -6,7 +6,7 @@ export default function TabTwoScreen() {
   <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          Loremipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -22,11 +22,13 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height:300,
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     backgroundColor: 'pink',
     marginHorizontal: 20,
+    height:300
   },
   text: {
     fontSize: 42,
