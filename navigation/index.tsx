@@ -14,8 +14,16 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
+import View from '../screens/BasicComp';
+import TabSevenScreen from '../screens/BasicComp';
+import TabSixScreen from '../screens/BasicComp';
+
 import TabTwoScreen from '../screens/TabTwoScreen';
+import TabFourScreen from '../screens/TabFourScreen';
+import TabFiveScreen from '../screens/TabFiveScreen';
+
+import TabThreeScreen from '../screens/TabThreeScreen';
+
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -64,9 +72,9 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="TabOne"
-        component={TabOneScreen}
+        component={View}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
+          title: 'View',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Pressable
@@ -92,6 +100,55 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="TabThree"
+        component={TabThreeScreen}
+        options={{
+          title: 'Tab Three',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+        <BottomTab.Screen
+        name="TabFour"
+        component={TabFourScreen}
+        options={{
+          title: 'Tab Four',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+        <BottomTab.Screen
+        name="TabFive"
+        component={TabFiveScreen}
+        options={{
+          title: 'Tab Five',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+        <BottomTab.Screen
+        name="TabSix"
+        component={TabSixScreen}
+        options={{
+          title: 'Tab Six',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+          <BottomTab.Screen
+        name="TabSeven"
+        component={TabFiveScreen}
+        options={{
+          title: 'Tab Five',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+          <BottomTab.Screen
+        name="TabEight"
+        component={TabFiveScreen}
+        options={{
+          title: 'Tab Five',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+          
     </BottomTab.Navigator>
   );
 }
