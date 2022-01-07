@@ -18,7 +18,7 @@ import View from '../screens/BasicComp';
 import TabSevenScreen from '../screens/BasicComp';
 import TabSixScreen from '../screens/BasicComp';
 
-import TabTwoScreen from '../screens/TabTwoScreen';
+import TabTwoScreen from '../screens/scrollView';
 import TabFourScreen from '../screens/TabFourScreen';
 import TabFiveScreen from '../screens/TabFiveScreen';
 
@@ -96,7 +96,7 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Tab Two',
+          title: 'ScrollView',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

@@ -16,12 +16,11 @@ import { StyleSheet } from 'react-native';
 
 
 import React from "react";
-import { View, Text,Image , ImageBackground } from "react-native";
+import { View, Text,Image ,  SafeAreaView, ScrollView,  } from "react-native";
 const image = { uri: "https://reactjs.org/logo-og.png" };
 const ViewBoxesWithColorAndText = () => {
   return (
   <View>
-  
       <View style={{flexDirection: "column",height: 200,padding: 10,marginVertical:0}}>
         <Text style={styles.title}>Text Component with Flex as View column</Text>
         <View style={{ backgroundColor: "blue", flex: 0.5 }} />
@@ -47,12 +46,10 @@ const ViewBoxesWithColorAndText = () => {
           uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
         }}/>
        
-          <ImageBackground source={image} resizeMode="cover" >
-            <Text> Inside</Text>
-          </ImageBackground>
+        
       
       </View>
-      
+
   </View>
     
   
@@ -83,6 +80,13 @@ const styles = StyleSheet.create({
   logo: {
     width: 66,
     height: 58,
+  },
+    scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
+  text: {
+    fontSize: 42,
   },
 });
 export default ViewBoxesWithColorAndText;
