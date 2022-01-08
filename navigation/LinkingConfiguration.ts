@@ -40,6 +40,12 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabFiveScreen: 'five',
             },
           },
+             Http: {
+            screens: {
+              HttpScreen: 'http',
+            },
+          },
+          
           
         },
       },

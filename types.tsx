@@ -30,7 +30,7 @@ export type RootTabParamList = {
   TabThree: undefined;
   TabFour: undefined;
   TabFive: undefined;
-  TabSix: undefined;
+  Http: undefined;
   TabSeven: undefined;
   TabEight: undefined;
   Tab9: undefined;

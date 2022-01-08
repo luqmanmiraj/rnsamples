@@ -16,11 +16,11 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import View from '../screens/BasicComp';
 import TabSevenScreen from '../screens/BasicComp';
-import TabSixScreen from '../screens/BasicComp';
+import HttpScreen from '../screens/httpcall';
 
 import TabTwoScreen from '../screens/scrollView';
 import TabFourScreen from '../screens/SectionList';
-import TabFiveScreen from '../screens/TabFiveScreen';
+import TabFiveScreen from '../screens/forms';
 
 import TabThreeScreen from '../screens/flatList';
 
@@ -120,31 +120,17 @@ function BottomTabNavigator() {
         name="TabFive"
         component={TabFiveScreen}
         options={{
-          title: 'Tab Five',
+          title: 'Forms components',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
-        <BottomTab.Screen
-        name="TabSix"
-        component={TabSixScreen}
-        options={{
-          title: 'Tab Six',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
+      
+       
           <BottomTab.Screen
-        name="TabSeven"
-        component={TabFiveScreen}
+        name="Http"
+        component={HttpScreen}
         options={{
-          title: 'Tab Five',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-          <BottomTab.Screen
-        name="TabEight"
-        component={TabFiveScreen}
-        options={{
-          title: 'Tab Five',
+          title: 'httpCall',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
