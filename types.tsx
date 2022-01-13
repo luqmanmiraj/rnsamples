@@ -19,7 +19,8 @@ export type RootStackParamList = {
   NotFound: undefined;
   Root1: undefined;
   Animations1: undefined;
-  Formik1:  undefined;
+  Formik1: undefined;
+  Webview: undefined;
   
   
 };
@@ -41,7 +42,7 @@ export type RootTabParamList = {
   Tab9: undefined;
   Tab10: undefined;
   Tab11: undefined;
- Tab12: undefined;
+  Tab12: undefined;
   Tab13: undefined;
   Tab14: undefined;
   Profile: undefined;

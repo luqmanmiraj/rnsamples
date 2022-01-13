@@ -55,6 +55,8 @@ const ViewBoxesWithColorAndText = ({ navigation }) => {
 
       <Button title="Animations" onPress={() => navigation.navigate('Animations')} />
       <Button title="Formik" onPress={() => navigation.navigate('Formik1')} />
+      <Button title="Webview" onPress={() => navigation.navigate('Webview')} />
+
 
     </View>
 

@@ -14,7 +14,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import Animations1 from '../screens/Animations';
+import Animations from '../screens/Animations';
 
 import View from '../screens/BasicComp';
 import TabSevenScreen from '../screens/BasicComp';
@@ -25,11 +25,14 @@ import Formik from '../screens/Formik';
 import TabTwoScreen from '../screens/scrollView';
 import TabFourScreen from '../screens/SectionList';
 import TabFiveScreen from '../screens/forms';
+import Webview from '../screens/Webview';
+
 
 import TabThreeScreen from '../screens/flatList';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+// import WebView from 'react-native-webview';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -53,8 +56,10 @@ function RootNavigator() {
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Root1" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Screen name="Animations" component={Animations1} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Animations1" component={Animations} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Formik1" component={Formik} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Webview" component={Webview} options={{ title: 'Oops!' }} />
+
 
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
