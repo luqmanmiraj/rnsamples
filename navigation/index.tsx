@@ -14,9 +14,13 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import Animations1 from '../screens/Animations';
+
 import View from '../screens/BasicComp';
 import TabSevenScreen from '../screens/BasicComp';
 import HttpScreen from '../screens/httpcall';
+import Formik from '../screens/Formik';
+
 
 import TabTwoScreen from '../screens/scrollView';
 import TabFourScreen from '../screens/SectionList';
@@ -47,7 +51,11 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="Root1" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Animations" component={Animations1} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Formik1" component={Formik} options={{ title: 'Oops!' }} />
+
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
@@ -120,7 +128,7 @@ function BottomTabNavigator() {
         name="TabFive"
         component={TabFiveScreen}
         options={{
-          title: 'Forms components',
+          title: 'Form',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

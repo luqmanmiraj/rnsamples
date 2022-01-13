@@ -16,43 +16,49 @@ import { StyleSheet } from 'react-native';
 
 
 import React from "react";
-import { View, Text,Image ,  SafeAreaView, ScrollView,  } from "react-native";
+import { View, Text, Image, SafeAreaView, ScrollView, Button } from "react-native";
+const ProfileScreen = ({ navigation, route }) => {
+  return <Text>This is {route.params.name}'s profile</Text>;
+};
 const image = { uri: "https://reactjs.org/logo-og.png" };
-const ViewBoxesWithColorAndText = () => {
+const ViewBoxesWithColorAndText = ({ navigation }) => {
   return (
-  <View>
-      <View style={{flexDirection: "column",height: 200,padding: 10,marginVertical:0}}>
+    <View>
+      <View style={{ flexDirection: "column", height: 200, padding: 10, marginVertical: 0 }}>
         <Text style={styles.title}>Text Component with Flex as View column</Text>
         <View style={{ backgroundColor: "blue", flex: 0.5 }} />
         <View style={{ backgroundColor: "red", flex: 0.5 }} />
       </View>
-     
-      <View style={{ flexDirection: "row", height: 100, padding: 10,margin:0}  } collapsable = {true} >
+
+      <View style={{ flexDirection: "row", height: 100, padding: 10, margin: 0 }} collapsable={true} >
         <Text style={styles.title}>Text Component with Flex as View row</Text>
         <View style={{ backgroundColor: "blue", flex: 0.2 }} accessibilityLabel="Tap me!" />
         <View style={{ backgroundColor: "red", flex: 0.5 }} />
       </View>
-  
+
       <View style={styles.container}>
-      <Image
-        style={styles.tinyLogo}
-        source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }}
-      />
-      <Image
-        style={styles.logo}
-        source={{
-          uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
-        }}/>
-       
-        
-      
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}
+        />
+        <Image
+          style={styles.logo}
+          source={{
+            uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+          }} />
+
+
+
       </View>
 
-  </View>
-    
-  
+      <Button title="Animations" onPress={() => navigation.navigate('Animations')} />
+      <Button title="Formik" onPress={() => navigation.navigate('Formik1')} />
+
+    </View>
+
+
   );
 };
 
@@ -65,7 +71,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    flex:0.5
+    flex: 0.5
   },
   separator: {
     marginVertical: 30,
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   tinyLogo: {
-    paddingTop:50,
+    paddingTop: 50,
     width: 50,
     height: 50,
   },
@@ -81,7 +87,7 @@ const styles = StyleSheet.create({
     width: 66,
     height: 58,
   },
-    scrollView: {
+  scrollView: {
     backgroundColor: 'pink',
     marginHorizontal: 20,
   },

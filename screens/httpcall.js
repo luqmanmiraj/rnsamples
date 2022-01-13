@@ -6,7 +6,7 @@ class HttpExample extends Component {
         data: ''
     }
     componentDidMount = () => {
-        fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        fetch('https://jsonplaceholder.typicode.com/posts/3', {
             method: 'GET'
         })
             .then((response) => response.json())
