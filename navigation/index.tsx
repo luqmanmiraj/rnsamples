@@ -26,6 +26,8 @@ import TabTwoScreen from '../screens/scrollView';
 import TabFourScreen from '../screens/SectionList';
 import TabFiveScreen from '../screens/forms';
 import Webview from '../screens/Webview';
+import Active from '../screens/Active';
+
 
 
 import TabThreeScreen from '../screens/flatList';
@@ -59,6 +61,8 @@ function RootNavigator() {
       <Stack.Screen name="Animations1" component={Animations} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Formik1" component={Formik} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Webview" component={Webview} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Activity1" component={Active} options={{ title: 'Loading!' }} />
+
 
 
       <Stack.Group screenOptions={{ presentation: 'modal' }}>

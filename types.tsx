@@ -21,6 +21,7 @@ export type RootStackParamList = {
   Animations1: undefined;
   Formik1: undefined;
   Webview: undefined;
+  Activity1: undefined;
   
   
 };
